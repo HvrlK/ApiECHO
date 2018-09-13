@@ -15,6 +15,7 @@
 		DD0C6811214AA39100F040D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0C680F214AA39100F040D4 /* LaunchScreen.storyboard */; };
 		DD0C6819214AA49C00F040D4 /* ApiECHO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0C6818214AA49C00F040D4 /* ApiECHO.swift */; };
 		DD15A8F0214AE43A004DA03A /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD15A8EF214AE43A004DA03A /* TextViewController.swift */; };
+		DDC497AB214B155F00FE6183 /* CountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC497AA214B155F00FE6183 /* CountTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		DD0C6812214AA39100F040D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD0C6818214AA49C00F040D4 /* ApiECHO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiECHO.swift; path = "/Users/vitaliihavryliuk/iOS/My Projects/ApiECHO/ApiECHO/ApiECHO.swift"; sourceTree = "<absolute>"; };
 		DD15A8EF214AE43A004DA03A /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		DDC497AA214B155F00FE6183 /* CountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountTableViewController.swift; sourceTree = "<group>"; };
 		F58A5CFF1D217F4C195589E9 /* Pods_ApiECHO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiECHO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 		DD0C6805214AA39100F040D4 /* ApiECHO */ = {
 			isa = PBXGroup;
 			children = (
+				DDC497AA214B155F00FE6183 /* CountTableViewController.swift */,
 				DD0C6806214AA39100F040D4 /* AppDelegate.swift */,
 				DD0C6818214AA49C00F040D4 /* ApiECHO.swift */,
 				DD0C6808214AA39100F040D4 /* LoginViewController.swift */,
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD0C6809214AA39100F040D4 /* LoginViewController.swift in Sources */,
+				DDC497AB214B155F00FE6183 /* CountTableViewController.swift in Sources */,
 				DD0C6807214AA39100F040D4 /* AppDelegate.swift in Sources */,
 				DD0C6819214AA49C00F040D4 /* ApiECHO.swift in Sources */,
 				DD15A8F0214AE43A004DA03A /* TextViewController.swift in Sources */,
