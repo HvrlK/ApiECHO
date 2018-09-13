@@ -12,8 +12,15 @@ class LoginViewController: UIViewController {
     
     //MARK: - Outlets
     
+    @IBOutlet weak var loginSignuoStackView: UIStackView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
+    
+    @IBOutlet weak var formStackView: UIStackView!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var signFormButton: UIButton!
 
     //MARK: - Methods
     
@@ -21,6 +28,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         customizeButton(loginButton)
         customizeButton(signupButton)
+        customizeButton(signFormButton)
     }
     
 
