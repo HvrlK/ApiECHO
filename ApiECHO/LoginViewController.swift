@@ -16,7 +16,6 @@ class LoginViewController: UIViewController {
         case hide
     }
     
-    
     //MARK: - Properties
     
     var formState: FormState = .hide
@@ -95,6 +94,7 @@ class LoginViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    
     private func presentTextViewController(accessToken: String) {
         guard let textController = storyboard?.instantiateViewController(withIdentifier: "TextViewController") as? TextViewController else { return }
         textController.accessToken = accessToken
@@ -123,7 +123,6 @@ class LoginViewController: UIViewController {
                     self.showAlert(message: message)
                     return
                 }
-                print(token)
                 self.presentTextViewController(accessToken: token)
             }
         case .signup:
@@ -136,7 +135,7 @@ class LoginViewController: UIViewController {
                     self.showAlert(message: message)
                     return
                 }
-                print(token)
+                self.presentTextViewController(accessToken: token)
             }
         default:
             return
