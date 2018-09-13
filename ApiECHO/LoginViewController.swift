@@ -95,6 +95,12 @@ class LoginViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    private func presentTextViewController(accessToken: String) {
+        guard let textController = storyboard?.instantiateViewController(withIdentifier: "TextViewController") as? TextViewController else { return }
+        textController.accessToken = accessToken
+        present(textController, animated: true, completion: nil)
+    }
+    
     //MARK: - Actions
     
     @IBAction func loginSignupButtonTapped(_ sender: UIButton) {
@@ -118,6 +124,7 @@ class LoginViewController: UIViewController {
                     return
                 }
                 print(token)
+                self.presentTextViewController(accessToken: token)
             }
         case .signup:
             guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text else { return }
