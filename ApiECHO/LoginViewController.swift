@@ -89,7 +89,10 @@ class LoginViewController: UIViewController {
     
     
     private func showAlert(message: String) {
-        
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
     
     
