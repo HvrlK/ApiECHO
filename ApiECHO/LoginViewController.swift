@@ -67,6 +67,7 @@ class LoginViewController: UIViewController {
 
     
     @objc func hideForm() {
+        view.endEditing(true)
         UIView.animate(withDuration: 0.5, animations: {
             self.formStackView.alpha = 0
         }) { finished in
