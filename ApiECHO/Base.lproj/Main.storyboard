@@ -104,19 +104,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Loading..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jj1-V5-dmq">
-                                <rect key="frame" x="10" y="30" width="355" height="627"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Jj1-V5-dmq">
+                                <rect key="frame" x="10" y="74" width="355" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGr-Dj-Eom">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Text" id="ftq-hz-xRI">
+                                        <barButtonItem key="rightBarButtonItem" title="Counting" id="mxV-NA-3fV"/>
+                                    </navigationItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="gmI-ja-GSn" id="JgS-gl-pgn"/>
+                                </connections>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="wGr-Dj-Eom" firstAttribute="trailing" secondItem="Hfd-uY-J7z" secondAttribute="trailing" id="67x-Tc-R0O"/>
+                            <constraint firstItem="wGr-Dj-Eom" firstAttribute="top" secondItem="Hfd-uY-J7z" secondAttribute="top" id="LD9-vX-c0w"/>
                             <constraint firstItem="Hfd-uY-J7z" firstAttribute="bottom" secondItem="Jj1-V5-dmq" secondAttribute="bottom" constant="10" id="UcI-5X-REB"/>
                             <constraint firstItem="Jj1-V5-dmq" firstAttribute="leading" secondItem="Hfd-uY-J7z" secondAttribute="leading" constant="10" id="gmq-Up-Okm"/>
-                            <constraint firstItem="Jj1-V5-dmq" firstAttribute="top" secondItem="Hfd-uY-J7z" secondAttribute="top" constant="10" id="hlx-kB-HNp"/>
+                            <constraint firstItem="Jj1-V5-dmq" firstAttribute="top" secondItem="wGr-Dj-Eom" secondAttribute="bottom" constant="10" id="hlx-kB-HNp"/>
                             <constraint firstItem="Hfd-uY-J7z" firstAttribute="trailing" secondItem="Jj1-V5-dmq" secondAttribute="trailing" constant="10" id="sz4-Hi-Mj4"/>
+                            <constraint firstItem="wGr-Dj-Eom" firstAttribute="leading" secondItem="Hfd-uY-J7z" secondAttribute="leading" id="uPJ-QK-0Dc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hfd-uY-J7z"/>
                     </view>
@@ -126,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0g-ax-8NH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="119"/>
+            <point key="canvasLocation" x="965.60000000000002" y="88.605697151424295"/>
         </scene>
     </scenes>
 </document>

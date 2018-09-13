@@ -22,9 +22,23 @@ class TextViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        guard let token = accessToken else {
+            return
+        }
+        ApiECHO.shared.fetchText(accessToken: token) { (text) in
+            self.textView.text = text
+        }
         
     }
     
 
+}
+
+
+extension TextViewController: UINavigationBarDelegate {
+    
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
+        return .topAttached
+    }
+    
 }
