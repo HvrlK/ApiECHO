@@ -74,14 +74,14 @@ class LoginViewController: UIViewController {
             UIView.animate(withDuration: 0.5, animations: {
                 self.loginSignupStackView.alpha = 1
             }) { finished in
-                self.resetTextFields()
+                self.resetForm()
                 self.formState = .hide
             }
         }
     }
     
     
-    private func resetTextFields() {
+    private func resetForm() {
         nameTextField.text = nil
         emailTextField.text = nil
         passwordTextField.text = nil
@@ -95,7 +95,6 @@ class LoginViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    
     //MARK: - Actions
     
     @IBAction func loginSignupButtonTapped(_ sender: UIButton) {
@@ -106,7 +105,7 @@ class LoginViewController: UIViewController {
     }
     
     
-    @IBAction func formButtonTapped(_ sender: UIButton) {
+    @IBAction func signFormButtonTapped(_ sender: UIButton) {
         switch formState {
         case .login:
             guard let email = emailTextField.text, let password = passwordTextField.text else { return }
@@ -163,6 +162,9 @@ extension LoginViewController: UITextFieldDelegate {
             nextField.becomeFirstResponder()
         } else {
             textField.resignFirstResponder()
+            if signFormButton.isEnabled {
+                signFormButtonTapped(signFormButton)
+            }
         }
         return true
     }
