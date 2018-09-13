@@ -102,6 +102,38 @@ class LoginViewController: UIViewController {
         showForm()
     }
     
+    
+    @IBAction func formButtonTapped(_ sender: UIButton) {
+        switch formState {
+        case .login:
+            guard let email = emailTextField.text, let password = passwordTextField.text else { return }
+            ApiECHO.shared.login(email: email, password: password) { (accessToken, errorMessage) in
+                guard let token = accessToken else {
+                    guard let message = errorMessage else {
+                        return
+                    }
+                    self.showAlert(message: message)
+                    return
+                }
+                print(token)
+            }
+        case .signup:
+            guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text else { return }
+            ApiECHO.shared.signup(name: name, email: email, password: password) { (accessToken, errorMessage) in
+                guard let token = accessToken else {
+                    guard let message = errorMessage else {
+                        return
+                    }
+                    self.showAlert(message: message)
+                    return
+                }
+                print(token)
+            }
+        default:
+            return
+        }
+    }
+    
 }
 
 
