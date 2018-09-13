@@ -114,7 +114,11 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Text" id="ftq-hz-xRI">
-                                        <barButtonItem key="rightBarButtonItem" title="Counting" id="mxV-NA-3fV"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Counting" id="mxV-NA-3fV">
+                                            <connections>
+                                                <segue destination="Ifi-FP-omP" kind="presentation" identifier="Counting" id="GFS-yB-l9y"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                                 <connections>
@@ -141,6 +145,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0g-ax-8NH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="965.60000000000002" y="88.605697151424295"/>
+        </scene>
+        <!--Count-->
+        <scene sceneID="ehx-Yr-iWM">
+            <objects>
+                <tableViewController id="dTd-bD-jXZ" customClass="CountTableViewController" customModule="ApiECHO" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0P5-FH-px6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountCell" id="eIk-ew-2sx">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eIk-ew-2sx" id="hoY-Ln-k0t">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dTd-bD-jXZ" id="P5e-qf-gBx"/>
+                            <outlet property="delegate" destination="dTd-bD-jXZ" id="3ls-bS-Cxb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Count" id="QBp-We-R3j">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="VHa-sW-ASp"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="76j-X1-hxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2596" y="89"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r7p-9G-cC3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ifi-FP-omP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PGt-Tb-Q0R">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dTd-bD-jXZ" kind="relationship" relationship="rootViewController" id="fMZ-lh-ZW0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6QK-a9-8R5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="89"/>
         </scene>
     </scenes>
 </document>
