@@ -59,6 +59,23 @@ class ApiECHO {
                 completion(accessToken, nil)
         }
     }
+    
+    
+    func fetchText(accessToken: String, completion: @escaping (String?) -> Void) {
+        Alamofire.request("https://apiecho.cf/api/get/text/",
+                          method: .get,
+                          parameters: [" " : "uk_UA"],
+                          headers: ["Authorization" : "Bearer \(accessToken)"])
+            .responseJSON { response in
+                guard response.result.isSuccess, let value = response.result.value else {
+                    print("Error while fetching tags: \(String(describing: response.result.error))")
+                    completion(nil)
+                    return
+                }
+                let text = JSON(value)["data"].description
+                completion(text)
+        }
+    }
 
     
 }
