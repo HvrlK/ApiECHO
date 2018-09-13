@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4AE904EBE3D38B0E1ED5B619 /* Pods_ApiECHO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A5CFF1D217F4C195589E9 /* Pods_ApiECHO.framework */; };
 		DD0C6807214AA39100F040D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0C6806214AA39100F040D4 /* AppDelegate.swift */; };
 		DD0C6809214AA39100F040D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0C6808214AA39100F040D4 /* ViewController.swift */; };
 		DD0C680C214AA39100F040D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0C680A214AA39100F040D4 /* Main.storyboard */; };
 		DD0C680E214AA39100F040D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD0C680D214AA39100F040D4 /* Assets.xcassets */; };
 		DD0C6811214AA39100F040D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0C680F214AA39100F040D4 /* LaunchScreen.storyboard */; };
+		DD0C6819214AA49C00F040D4 /* ApiECHO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0C6818214AA49C00F040D4 /* ApiECHO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		310928AF885DE456998B22D6 /* Pods-ApiECHO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiECHO.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApiECHO/Pods-ApiECHO.release.xcconfig"; sourceTree = "<group>"; };
+		4DAEA97310EDED7E25E6FFE5 /* Pods-ApiECHO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiECHO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ApiECHO/Pods-ApiECHO.debug.xcconfig"; sourceTree = "<group>"; };
 		DD0C6803214AA39100F040D4 /* ApiECHO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiECHO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD0C6806214AA39100F040D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD0C6808214AA39100F040D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		DD0C680D214AA39100F040D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD0C6810214AA39100F040D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD0C6812214AA39100F040D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD0C6818214AA49C00F040D4 /* ApiECHO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiECHO.swift; path = "/Users/vitaliihavryliuk/iOS/My Projects/ApiECHO/ApiECHO/ApiECHO.swift"; sourceTree = "<absolute>"; };
+		F58A5CFF1D217F4C195589E9 /* Pods_ApiECHO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiECHO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE904EBE3D38B0E1ED5B619 /* Pods_ApiECHO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8ECBC6D02E699BEC12AE5BF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F58A5CFF1D217F4C195589E9 /* Pods_ApiECHO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD6A3C2BF3DB3CC5F9AF3C69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DAEA97310EDED7E25E6FFE5 /* Pods-ApiECHO.debug.xcconfig */,
+				310928AF885DE456998B22D6 /* Pods-ApiECHO.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DD0C67FA214AA39100F040D4 = {
 			isa = PBXGroup;
 			children = (
 				DD0C6805214AA39100F040D4 /* ApiECHO */,
 				DD0C6804214AA39100F040D4 /* Products */,
+				CD6A3C2BF3DB3CC5F9AF3C69 /* Pods */,
+				8ECBC6D02E699BEC12AE5BF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				DD0C6806214AA39100F040D4 /* AppDelegate.swift */,
+				DD0C6818214AA49C00F040D4 /* ApiECHO.swift */,
 				DD0C6808214AA39100F040D4 /* ViewController.swift */,
 				DD0C680A214AA39100F040D4 /* Main.storyboard */,
 				DD0C680D214AA39100F040D4 /* Assets.xcassets */,
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD0C6815214AA39100F040D4 /* Build configuration list for PBXNativeTarget "ApiECHO" */;
 			buildPhases = (
+				97AAF549CB5B3F662AF89216 /* [CP] Check Pods Manifest.lock */,
 				DD0C67FF214AA39100F040D4 /* Sources */,
 				DD0C6800214AA39100F040D4 /* Frameworks */,
 				DD0C6801214AA39100F040D4 /* Resources */,
+				76DA732224691CE43321CF59 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +159,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		76DA732224691CE43321CF59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ApiECHO/Pods-ApiECHO-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ApiECHO/Pods-ApiECHO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97AAF549CB5B3F662AF89216 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ApiECHO-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DD0C67FF214AA39100F040D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,6 +207,7 @@
 			files = (
 				DD0C6809214AA39100F040D4 /* ViewController.swift in Sources */,
 				DD0C6807214AA39100F040D4 /* AppDelegate.swift in Sources */,
+				DD0C6819214AA49C00F040D4 /* ApiECHO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +351,7 @@
 		};
 		DD0C6816214AA39100F040D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DAEA97310EDED7E25E6FFE5 /* Pods-ApiECHO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +370,7 @@
 		};
 		DD0C6817214AA39100F040D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 310928AF885DE456998B22D6 /* Pods-ApiECHO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
