@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
     
     //MARK: - Outlets
     
-    @IBOutlet weak var loginSignuoStackView: UIStackView!
+    @IBOutlet weak var loginSignupStackView: UIStackView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     
@@ -29,6 +29,9 @@ class LoginViewController: UIViewController {
         customizeButton(loginButton)
         customizeButton(signupButton)
         customizeButton(signFormButton)
+        formStackView.alpha = 0
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideForm))
+        view.addGestureRecognizer(tap)
     }
     
 
@@ -37,7 +40,38 @@ class LoginViewController: UIViewController {
         button.backgroundColor = ButtonConstants.backgroundColor
         button.setTitleColor(ButtonConstants.textColor, for: .normal)
     }
+    
+    
+    private func showForm() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.loginSignupStackView.alpha = 0
+        }) { finished in
+            UIView.animate(withDuration: 0.5, animations: {
+                self.formStackView.alpha = 1
+            })
+        }
+    }
 
+    
+    @objc func hideForm() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.formStackView.alpha = 0
+        }) { finished in
+            UIView.animate(withDuration: 0.5, animations: {
+                self.loginSignupStackView.alpha = 1
+            })
+        }
+    }
+    
+    
+    //MARK: - Actions
+    
+    @IBAction func loginSignupButtonTapped(_ sender: UIButton) {
+        nameTextField.isHidden = sender.titleLabel?.text == "Log In"
+        signFormButton.setTitle(sender.titleLabel?.text == "Log In" ? "Log In" : "Sign Up", for: .normal)
+        showForm()
+    }
+    
 }
 
 

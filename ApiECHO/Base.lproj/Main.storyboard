@@ -17,18 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="sQl-ok-q0A">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="sQl-ok-q0A">
                                 <rect key="frame" x="50" y="267.5" width="275" height="132"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dma-4c-jpq">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="51"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <action selector="loginSignupButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XkO-pv-egE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVB-4E-mdD">
                                         <rect key="frame" x="0.0" y="81" width="275" height="51"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="loginSignupButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3sd-lc-qgY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -51,7 +57,7 @@
                                         <rect key="frame" x="0.0" y="117" width="335" height="38"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJr-PK-ieG">
                                         <rect key="frame" x="0.0" y="175" width="335" height="42"/>
@@ -76,7 +82,7 @@
                         <outlet property="emailTextField" destination="mM5-yZ-Lim" id="mC7-8D-vFM"/>
                         <outlet property="formStackView" destination="5W0-wS-1dV" id="cJj-BJ-pFI"/>
                         <outlet property="loginButton" destination="dma-4c-jpq" id="5jD-BX-gnR"/>
-                        <outlet property="loginSignuoStackView" destination="sQl-ok-q0A" id="ikA-y6-qiT"/>
+                        <outlet property="loginSignupStackView" destination="sQl-ok-q0A" id="ikA-y6-qiT"/>
                         <outlet property="nameTextField" destination="IKp-tB-L61" id="rBB-Qp-ui9"/>
                         <outlet property="passwordTextField" destination="yAf-nQ-74f" id="bET-tY-kKi"/>
                         <outlet property="signFormButton" destination="uJr-PK-ieG" id="sL5-zq-UIJ"/>
@@ -85,21 +91,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="s9c-sy-FTO">
-            <objects>
-                <viewController id="wxk-0y-6Rz" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="L5C-Xm-sCB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="7eh-Ot-YhJ"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9xY-Z0-Wu9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="950" y="27"/>
         </scene>
     </scenes>
 </document>
