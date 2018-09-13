@@ -100,6 +100,7 @@ class LoginViewController: UIViewController {
         guard let textController = storyboard?.instantiateViewController(withIdentifier: "TextViewController") as? TextViewController else { return }
         textController.accessToken = accessToken
         present(textController, animated: true, completion: nil)
+        hideForm()
     }
     
     //MARK: - Actions

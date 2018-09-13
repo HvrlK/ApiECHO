@@ -114,6 +114,11 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Text" id="ftq-hz-xRI">
+                                        <barButtonItem key="leftBarButtonItem" title="Log out" id="tuE-fB-n4e">
+                                            <connections>
+                                                <action selector="logoutButtonTapped:" destination="gmI-ja-GSn" id="NnL-i9-PEo"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Counting" id="mxV-NA-3fV">
                                             <connections>
                                                 <segue destination="Ifi-FP-omP" kind="presentation" identifier="Counting" id="GFS-yB-l9y"/>

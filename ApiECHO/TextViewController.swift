@@ -40,6 +40,11 @@ class TextViewController: UIViewController {
         countTableViewController.data = countCharacters(text: textView.text)
     }
     
+    //MARK: - Actions
+    
+    @IBAction func logoutButtonTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
 
 }
 
