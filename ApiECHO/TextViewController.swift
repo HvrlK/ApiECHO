@@ -31,9 +31,20 @@ class TextViewController: UIViewController {
         
     }
     
+    //MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "Counting", let navController = segue.destination as? UINavigationController, let countTableViewController = navController.topViewController as? CountTableViewController else {
+            return
+        }
+        countTableViewController.data = countCharacters(text: textView.text)
+    }
+    
 
 }
 
+
+//MARK: - Extensions
 
 extension TextViewController: UINavigationBarDelegate {
     
