@@ -175,7 +175,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Count" id="QBp-We-R3j">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="VHa-sW-ASp"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="VHa-sW-ASp">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="dTd-bD-jXZ" id="cD5-wc-rMw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="76j-X1-hxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
