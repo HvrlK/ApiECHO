@@ -57,12 +57,15 @@
                                         <rect key="frame" x="0.0" y="117" width="335" height="38"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJr-PK-ieG">
                                         <rect key="frame" x="0.0" y="175" width="335" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="formButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZN1-b0-rTv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
